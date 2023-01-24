@@ -3,9 +3,19 @@ pipeline {
     agent any
   
     stages {
-        stage('build') {
+        stage('main') {
             steps {
-                sh 'mvn --version'
+                echo 'main'
+            }
+        }
+         stage('dev') {
+            steps {
+                echo 'dev'
+            }
+        }
+         stage('feature-one') {
+            steps {
+                echo 'feature-one'
             }
         }
     }
